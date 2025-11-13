@@ -1,0 +1,127 @@
+:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lesson-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  max-width: 720px;
+  width: 100%;
+  padding: 2.5rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.header {
+  text-align: center;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.header h1 {
+  font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+#startButton {
+  justify-self: center;
+  padding: 0.85rem 1.75rem;
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#startButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  background: #cbd5f5;
+  color: #1e293b;
+}
+
+#startButton:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+}
+
+.status {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.status-item h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.status-item p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  min-height: 1.6em;
+}
+
+#timerDisplay {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.feedback {
+  font-weight: 600;
+}
+
+.feedback-success {
+  color: #16a34a;
+}
+
+.feedback-error {
+  color: #dc2626;
+}
+
+.feedback-warning {
+  color: #f97316;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .lesson-container {
+    padding: 1.5rem;
+  }
+
+  #timerDisplay {
+    font-size: 2rem;
+  }
+}

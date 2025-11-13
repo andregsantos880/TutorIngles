@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Callan Method English Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="lesson-container">
+    <section class="header">
+      <h1>Callan Method English Practice</h1>
+      <p class="subtitle">Fast, focused speaking drills with instant feedback.</p>
+      <button id="startButton">Start Lesson</button>
+    </section>
+
+    <section class="status">
+      <div class="status-item">
+        <h2>Question</h2>
+        <p id="questionText">Press start to begin.</p>
+      </div>
+      <div class="status-item">
+        <h2>Timer</h2>
+        <p id="timerDisplay">--</p>
+      </div>
+      <div class="status-item">
+        <h2>Your Response</h2>
+        <p id="transcript">Waiting...</p>
+      </div>
+      <div class="status-item">
+        <h2>Feedback</h2>
+        <p id="feedback">&nbsp;</p>
+      </div>
+      <div class="status-item">
+        <h2>Pronunciation</h2>
+        <p id="pronunciationScore">--</p>
+      </div>
+    </section>
+  </main>
+
+  <template id="encouragementTemplate">
+    <span class="feedback feedback-warning">Faster! Try again like the Callan Method.</span>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
